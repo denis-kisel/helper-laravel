@@ -20,21 +20,23 @@ use DenisKisel\Helper\AStr;
 // Get substring by mask
 AStr::getContent($mask, $str);
 
-echo AStr::getContent('{*}', 'some {placeholder} text');
-// Output:
+//Example
+AStr::getContent('{*}', 'some {placeholder} text');
+// Return:
 // placeholder
 
-echo AStr::getContent('Hello * world', 'Hello wonderful world');
-// Output:
+AStr::getContent('Hello * world', 'Hello wonderful world');
+// Return:
 // wonderful
 
 
 // Remove substring by mask
 AStr::rm($mask, &$str)
 
+//Example
 $text = 'some {placeholder} text';
-echo AStr::rm('{*}', 'some {placeholder} text');
-// Output:
+AStr::rm('{*}', $text);
+// Return:
 // {placeholder}
 
 echo $text;
@@ -45,6 +47,7 @@ echo $text;
 // Check substring by mask
 AStr::is($mask, $str);
 
+//Example
 AStr::is('Hello * world', 'Hello wonderful world');
 // Return:
 // (boolean)true
@@ -53,6 +56,7 @@ AStr::is('Hello * world', 'Hello wonderful world');
 // Format text
 AStr::formatText($text, $countTabs = 0);
 
+//Example
 AStr::formatText('Some text', 3);
 // Return:
 // \t\t\tSome text\n
@@ -61,21 +65,23 @@ AStr::formatText('Some text', 3);
 // Get path by class
 AStr::pathByClass($model);
 
-echo AStr::pathByClass('App\\Models\\Page');
+//Example
+AStr::pathByClass('App\\Models\\Page');
 // Return: absolute path to input class
 
 
 // Append substring
 AStr::append($search, $append, $text, $countTabs = 0);
 
+//Example
 $text = <<<EOF
     function() {
         //TODO
     }
 EOF;
 
-echo AStr::append('function() {', 'echo __LINE__;', $text, $countTabs = 2);
-// Output
+AStr::append('function() {', 'echo __LINE__;', $text, $countTabs = 2);
+// Return
 //    function() {
 //        echo __LINE__;
 //        //TODO
@@ -85,14 +91,15 @@ echo AStr::append('function() {', 'echo __LINE__;', $text, $countTabs = 2);
 // Prepend substring
 AStr::prepend($search, $prepend, $text, $countTabs = 0);
 
+//Example
 $text = <<<EOF
     function() {
         //TODO
     }
 EOF;
 
-echo AStr::prepend('}', 'echo __LINE__;', $text, $countTabs = 2);
-// Output
+AStr::prepend('}', 'echo __LINE__;', $text, $countTabs = 2);
+// Return
 //    function() {
 //        //TODO
 //        echo __LINE__;
