@@ -1,0 +1,32 @@
+{
+    "name": "denis-kisel/helper",
+    "description": ":description",
+    "license": "license",
+    "authors": [
+        {
+            "name": "author name",
+            "email": "author email",
+            "homepage": "author homepage"
+        }
+    ],
+    "homepage": "https://github.com/denis-kisel/helper-laravel",
+    "keywords": ["Laravel", "Helper"],
+    "require": {
+        "illuminate/support": "~5"
+    },
+    "autoload": {
+        "psr-4": {
+            "DenisKisel\\Helper\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "DenisKisel\\Helper\\HelperServiceProvider"
+            ],
+            "aliases": {
+                "Helper": "DenisKisel\\Helper\\Facades\\Helper"
+            }
+        }
+    }
+}
