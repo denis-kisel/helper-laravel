@@ -16,7 +16,7 @@ Namespace  *DenisKisel\Helper\AStr*
 
 | Method | Description |
 | --- | --- |
-| ``` AStr::getContent(string $mask, string $str) : string ``` | Get substring by mask |
+| `AStr::getContent(string $mask, string $str) : string` | Get substring by mask |
 | `AStr::rm(string $mask, string &$str) : string` | Remove substring by mask |
 | `AStr::is(string $mask, string $str) : string` | Check substring by mask |
 | `AStr::formatText(string $text [, int $countTabs = 0]) : string` | Format text |
