@@ -1,12 +1,12 @@
 {
     "name": "denis-kisel/helper",
     "description": ":description",
-    "license": "license",
+    "license": "MIT",
     "authors": [
         {
-            "name": "author name",
-            "email": "author email",
-            "homepage": "author homepage"
+            "name": "Denis Kisel",
+            "email": "denis.kisel92@gmail.com",
+            "homepage": "https://digital-elephant.com.ua/"
         }
     ],
     "homepage": "https://github.com/denis-kisel/helper-laravel",
